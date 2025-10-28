@@ -3,13 +3,14 @@ export default class FileSizeUnit extends Enum {
     #power;
     #unitName;
     #unitShortName;
-    /**
-     * 기준 값 (단위 bytes)
-     */
+    /** 기준 값 (단위 bytes) */
     get baseBytes() { return null; }
     ;
+    /** 단위 별 승수 */
     get power() { return this.#power; }
+    /** 단위 명 */
     get unitName() { return this.#unitName; }
+    /** 단위 축약명 */
     get unitShortName() { return this.#unitShortName; }
     constructor(value, unitName, unitShortName, power) {
         super(value);

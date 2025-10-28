@@ -1,5 +1,5 @@
+import { fileSize } from "@nuka9510/file-size-unit-enum/@types/interfaces/file-size-unit";
 import { Enum } from "@nuka9510/simple-enum";
-import { fileSize } from "../../@types/interfaces/file_size_unit";
 
 export default class FileSizeUnit extends Enum<string> {
   #power: number;
@@ -8,15 +8,16 @@ export default class FileSizeUnit extends Enum<string> {
 
   #unitShortName: string;
 
-  /**
-   * 기준 값 (단위 bytes)
-   */
+  /** 기준 값 (단위 bytes) */
   get baseBytes(): number | null { return null; };
 
+  /** 단위 별 승수 */
   get power(): number { return this.#power; }
 
+  /** 단위 명 */
   get unitName(): string { return this.#unitName; }
 
+  /** 단위 축약명 */
   get unitShortName(): string { return this.#unitShortName; }
 
   constructor(

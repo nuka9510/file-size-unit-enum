@@ -10,7 +10,12 @@
     "target": "ESNext",
     "declaration": true,
     "declarationDir": "dist",
-    "outDir": "dist"
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@nuka9510/file-size-unit-enum": ["src/index.ts"],
+      "@nuka9510/file-size-unit-enum/@types/interfaces/file-size-unit": ["@types/interfaces/file-size-unit.d.ts"]
+    }
   },
   "include": [
     "src/index.ts"

@@ -9,9 +9,10 @@
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "target": "ESNext",
     "paths": {
+      "@nuka9510/js-util": [ "../../node_modules/@nuka9510/js-util/dist/index.d.ts" ],
+      "@nuka9510/simple-enum": [ "../../node_modules/@nuka9510/simple-enum/dist/index.d.ts" ],
       "@nuka9510/file-size-unit-enum": [ "../../dist/index.d.ts" ],
-      "@nuka9510/js-util": [ "../../node_modules/@nuka9510/js-util/dist/index.ts" ],
-      "@nuka9510/simple-enum": [ "../../node_modules/@nuka9510/simple-enum/dist/index.ts" ]
+      "@nuka9510/file-size-unit-enum/@types/interfaces/file-size-unit": ["../../@types/interfaces/file-size-unit.d.ts"]
     }
   }
 }

@@ -14,7 +14,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ IEC)
 /* harmony export */ });
 /* harmony import */ var _nuka9510_js_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @nuka9510/js-util */ "./node_modules/@nuka9510/js-util/dist/esm/index.min.mjs");
-/* harmony import */ var _interfaces_file_size_unit_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../interfaces/file_size_unit.js */ "./dist/interfaces/file_size_unit.js");
+/* harmony import */ var _interfaces_file_size_unit_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../interfaces/file-size-unit.js */ "./dist/interfaces/file-size-unit.js");
 
 
 /** 정보 단위 (이진 접두어) */
@@ -69,7 +69,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ SI)
 /* harmony export */ });
 /* harmony import */ var _nuka9510_js_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @nuka9510/js-util */ "./node_modules/@nuka9510/js-util/dist/esm/index.min.mjs");
-/* harmony import */ var _interfaces_file_size_unit_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../interfaces/file_size_unit.js */ "./dist/interfaces/file_size_unit.js");
+/* harmony import */ var _interfaces_file_size_unit_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../interfaces/file-size-unit.js */ "./dist/interfaces/file-size-unit.js");
 
 
 /** 정보 단위 (십진 접두어) */
@@ -113,9 +113,9 @@ class SI extends _interfaces_file_size_unit_js__WEBPACK_IMPORTED_MODULE_1__["def
 
 /***/ }),
 
-/***/ "./dist/interfaces/file_size_unit.js":
+/***/ "./dist/interfaces/file-size-unit.js":
 /*!*******************************************!*\
-  !*** ./dist/interfaces/file_size_unit.js ***!
+  !*** ./dist/interfaces/file-size-unit.js ***!
   \*******************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
@@ -129,13 +129,14 @@ class FileSizeUnit extends _nuka9510_simple_enum__WEBPACK_IMPORTED_MODULE_0__.En
     #power;
     #unitName;
     #unitShortName;
-    /**
-     * 기준 값 (단위 bytes)
-     */
+    /** 기준 값 (단위 bytes) */
     get baseBytes() { return null; }
     ;
+    /** 단위 별 승수 */
     get power() { return this.#power; }
+    /** 단위 명 */
     get unitName() { return this.#unitName; }
+    /** 단위 축약명 */
     get unitShortName() { return this.#unitShortName; }
     constructor(value, unitName, unitShortName, power) {
         super(value);
@@ -250,11 +251,14 @@ var __webpack_exports__ = {};
   \***********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   FileSizeUnit: () => (/* reexport safe */ _interfaces_file_size_unit_js__WEBPACK_IMPORTED_MODULE_2__["default"]),
 /* harmony export */   IEC: () => (/* reexport safe */ _enums_iec_js__WEBPACK_IMPORTED_MODULE_1__["default"]),
 /* harmony export */   SI: () => (/* reexport safe */ _enums_si_js__WEBPACK_IMPORTED_MODULE_0__["default"])
 /* harmony export */ });
 /* harmony import */ var _enums_si_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./enums/si.js */ "./dist/enums/si.js");
 /* harmony import */ var _enums_iec_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./enums/iec.js */ "./dist/enums/iec.js");
+/* harmony import */ var _interfaces_file_size_unit_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./interfaces/file-size-unit.js */ "./dist/interfaces/file-size-unit.js");
+
 
 
 

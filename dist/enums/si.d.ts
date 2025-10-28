@@ -1,5 +1,5 @@
-import { fileSize } from "../../@types/interfaces/file_size_unit";
-import FileSizeUnit from "../interfaces/file_size_unit.js";
+import { fileSize } from "@nuka9510/file-size-unit-enum/@types/interfaces/file-size-unit";
+import FileSizeUnit from "../interfaces/file-size-unit.js";
 /** 정보 단위 (십진 접두어) */
 export default class SI extends FileSizeUnit {
     #private;

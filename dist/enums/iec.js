@@ -1,5 +1,5 @@
 import { Util } from "@nuka9510/js-util";
-import FileSizeUnit from "../interfaces/file_size_unit.js";
+import FileSizeUnit from "../interfaces/file-size-unit.js";
 /** 정보 단위 (이진 접두어) */
 export default class IEC extends FileSizeUnit {
     static #B = new IEC('B', 'Byte', 'B', 0);

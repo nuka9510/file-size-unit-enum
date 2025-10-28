@@ -1,4 +1,4 @@
-import FileSizeUnit from "../../src/interfaces/file_size_unit.js";
+import { FileSizeUnit } from "@nuka9510/file-size-unit-enum";
 
 interface fileSize {
   /** 파일 bytes */
