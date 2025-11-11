@@ -33,116 +33,67 @@
 [top-language]: https://img.shields.io/github/languages/top/nuka9510/file-size-unit-enum
 
 ## Install
-```
+
+```shell
 npm i @nuka9510/file-size-unit-enum
 ```
-```
+
+```html
 <script src="https://cdn.jsdelivr.net/npm/@nuka9510/file-size-unit-enum/dist/js/index.min.js"> </script>
 ```
-```
+
+```html
 <script src="https://cdn.jsdelivr.net/npm/@nuka9510/file-size-unit-enum@latest/dist/js/index.min.js"> </script>
 ```
-```
+
+```html
 <script src="https://cdn.jsdelivr.net/npm/@nuka9510/file-size-unit-enum@<specific-version>/dist/js/index.min.js"> </script>
 ```
-```
+
+```html
 <script type="importmap">
   {
     "imports": { "@nuka9510/file-size-unit-enum": "https://cdn.jsdelivr.net/npm/@nuka9510/file-size-unit-enum/dist/esm/index.min.mjs" }
   }
 </script>
 ```
-```
+
+```html
 <script type="importmap">
   {
     "imports": { "@nuka9510/file-size-unit-enum": "https://cdn.jsdelivr.net/npm/@nuka9510/file-size-unit-enum@latest/dist/esm/index.min.mjs" }
   }
 </script>
 ```
-```
+
+```html
 <script type="importmap">
   {
     "imports": { "@nuka9510/file-size-unit-enum": "https://cdn.jsdelivr.net/npm/@nuka9510/file-size-unit-enum@<specific-version>/dist/esm/index.min.mjs" }
   }
 </script>
 ```
+
 ## Usage
+
 ### js
-```
+
+```js
 fileSizeUnitEnum.IEC;
 fileSizeUnitEnum.SI;
 ```
-### mjs
-```
-import { IEC, SI } from "@nuka9510/file-size-unit-enum";
 
-IEC;
-SI;
+### mjs
+
+```js
+import { IEC, SI } from "@nuka9510/file-size-unit-enum";
 ```
+
 ### cjs
-```
+
+```js
 const fileSizeUnitEnum = require('@nuka9510/file-size-unit-enum');
 
 fileSizeUnitEnum.IEC;
 fileSizeUnitEnum.SI;
 ```
-### example
-```
-example
-├── js
-│  └── case_1.mjs
-└── view
-   └── case_1.html
-```
-- `js/case_1.mjs`
-```
-import { IEC } from "@nuka9510/file-size-unit-enum";
-
-class Case1 {
-  constructor() {
-    this.onFileChange = this.onFileChange.bind(this);
-
-    document.querySelectorAll('[data-action="file-change"]')
-            .forEach((...arg) => { arg[0].addEventListener('change', this.onFileChange); });
-  }
-
-  onFileChange(
-    /** @type {Event} */ ev
-  ) {
-    /** @type {HTMLInputElement} */
-    const target = ev.currentTarget,
-    /** @type {HTMLParagraphElement} */
-    fileListEl = document.querySelector('[data-name="file-list"]');
-
-    fileListEl.innerHTML = [...target.files].map((...arg) => {
-                                              const file = arg[0],
-                                              iec = IEC.getDisplayUnit(file.size);
-
-                                              return `${ file.name } | ${ file.size }${ IEC.B.unitShortName } | ${ iec.transFromBytes(file.size).size }${ iec.unitShortName }`;
-                                            })
-                                            .join('<br/>');
-  }
-}
-
-new Case1();
-```
-- `view/case_1.html`
-```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <input type="file" data-action="file-change" multiple>
-  <p data-name="file-list"></p>
-</body>
-<script type="importmap">
-  {
-    "imports": { "@nuka9510/file-size-unit-enum": "https://cdn.jsdelivr.net/npm/@nuka9510/file-size-unit-enum/dist/esm/index.min.mjs" }
-  }
-</script>
-<script src="../js/case_1.mjs" type="module"></script>
-</html>
